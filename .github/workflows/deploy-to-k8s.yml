@@ -25,5 +25,5 @@ jobs:
       uses: appleboy/kubectl-action@v1.0.0
       with:
         args: apply -f deployment.yaml
-        env:
-          KUBECONFIG: ${{ env.KUBECONFIG }}
+      env:
+        KUBECONFIG: ${{ env.KUBECONFIG }}
