@@ -41,3 +41,9 @@ jobs:
 
     - name: Update kube config
       run: aws eks update-kubeconfig --name demo-eks
+      
+    - name: Deploy to EKS
+      run: |
+        kubectl apply -f deployment.yaml
+        kubectl apply -f service.yaml
+    
